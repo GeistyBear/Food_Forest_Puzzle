@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Food Forest</title>
+    <style>
+      .cell {
+        border: solid black 1px;
+        height: 20px;
+        width: 20px;
+        user-select: none;
+      }
+      .greenhouse {
+        display: flex;
+        flex-direction: row;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="1" class="cell"></div>
+    <div id="2" class="cell"></div>
+    <div id="3" class="cell"></div>
+    <hr />
+    <div class="greenhouse">
+      <div id="banana" onclick="selectPlant('banana')">🍌</div>
+      <div id="coconut" onclick="selectPlant('coconut')">🥥</div>
+      <div id="bean" onclick="selectPlant('bean')">🌱</div>
+    </div>
+  </body>
+  <script>
+    var div1 = document.getElementById('1');
+    var div2 = document.getElementById('2');
+    var div3 = document.getElementById('3');
+
+    function setDiv(element) {
+      if (localStorage.getItem('selectedPlant')) {
+        switch (localStorage.getItem('selectedPlant')) {
+          case 'bean':
+            element.innerHTML = '🌱';
+            break;
+          case 'banana':
+            element.innerHTML = '🍌';
+            break;
+          case 'coconut':
+            element.innerHTML = '🥥';
+            break;
+        }
+      }
+    }
+
+    div1.addEventListener('click', function () {
+      if (div1.innerHTML == '') {
+        setDiv(div1);
+      } else {
+        div1.innerHTML = '';
+      }
+    });
+    div2.addEventListener('click', function () {
+      if (div2.innerHTML == '') {
+        setDiv(div2);
+      } else {
+        div2.innerHTML = '';
+      }
+    });
+    div3.addEventListener('click', function () {
+      if (div3.innerHTML == '') {
+        setDiv(div3);
+      } else {
+        div3.innerHTML = '';
+      }
+    });
+
+    function selectPlant(plant) {
+      localStorage.setItem('selectedPlant', plant);
+    }
+  </script>
+
+  🥦🍌🥥🌱
+</html>
