@@ -7,7 +7,7 @@ body {
   justify-content: center;
 }
 
-.cells {
+.cell {
   display: flex;
   justify-content: center;
 }
