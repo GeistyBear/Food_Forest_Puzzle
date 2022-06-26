@@ -73,11 +73,30 @@
         div3.innerHTML = '';
       }
     });
+    div4.addEventListener('click', function () {
+      if (div4.innerHTML == '') {
+        setDiv(div4);
+      } else {
+        div4.innerHTML = '';
+      }
+    });
+    div5.addEventListener('click', function () {
+      if (div5.innerHTML == '') {
+        setDiv(div5);
+      } else {
+        div5.innerHTML = '';
+      }
+    });
+    div6.addEventListener('click', function () {
+      if (div6.innerHTML == '') {
+        setDiv(div6);
+      } else {
+        div6.innerHTML = '';
+      }
+    });
 
     function selectPlant(plant) {
       localStorage.setItem('selectedPlant', plant);
     }
   </script>
-
-  🥦🍌🥥🌱
 </html>
