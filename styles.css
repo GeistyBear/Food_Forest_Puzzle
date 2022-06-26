@@ -9,7 +9,8 @@
 }
 body {
   background-color: #035803;
-  background-image: url('Leaf_Branches_Background.jpg');
+  background-image: url('Leaf_Branches_Background.jpg') no-repeat center fixed;
+  background-size: cover;
 }
 .greenhouse {
   display: flex;
