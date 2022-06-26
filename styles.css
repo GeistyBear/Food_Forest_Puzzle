@@ -1,13 +1,19 @@
+.cell {
+  border: solid black 1px;
+  height: 60px;
+  width: 7fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  user-select: none;
+}
 body {
   background-color: #035803;
+  background-image: url('Leaf_Branches_Background.jpg');
 }
-
 .greenhouse {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-}
-
-.cell {
-  display: flex;
-  justify-content: center;
+  user-select: none;
 }
